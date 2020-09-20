@@ -1,0 +1,15 @@
+Create Pod (kind) file
+1) Use the command to create pod
+
+          => sudo microk8s.kubectl apply -f posts.yaml
+
+2) Get the status of pods
+
+          => sudo microk8s.kubectl get pods
+          
+3) More details on a specific pod
+
+          => sudo microk8s.kubectl describe pod posts
+          
+          
+
