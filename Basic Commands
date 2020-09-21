@@ -67,5 +67,12 @@ Add a deployment object using apply -f command.
     - Load Balancer -> Make pod available to outside the cluster - Right way in production
     - External Name -> Redirects an in-cluser request to CNAME url 
    
+ 1) Appy the node port service 
+ 
+          - > sudo microk8s.kubectl apply -f posts-srv.yaml
+          - > sudo microk8s.kubectl describe posts-srv
+          - > => kubectl get services
+          
+          The NodePort IP is the external IP to which outside world can connect to cluster
            
 
