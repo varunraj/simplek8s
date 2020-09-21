@@ -1,3 +1,6 @@
+PODS
+----
+
 Create Pod (kind) file
 1) Use the command to create pod ( WE DONT CREATE PODS DIRECTLY. IT SHOULD BE DONE USING DEPLOYMENTS )
 
@@ -26,6 +29,7 @@ a pod, then it will prompt to enter the specific container
           
           
 // DEPLOYMENT 
+--------------
 
 Add a deployment object using apply -f command.
 
@@ -50,5 +54,18 @@ Add a deployment object using apply -f command.
            - run below command
            
                     => kubectl rollout restart deployment posts-depl  (posts-depl is the name of deployment)
+                    
+   SERVICES
+   --------
+   
+   Services are to create networking with pods
+   
+   Type of service
+   
+    - Cluster IP -> Set up easy to remember url to access the port. Only expose pod to inside cluster.
+    - Node Port -> Make a pod accessable from outrside the cluster. Used for Dev process
+    - Load Balancer -> Make pod available to outside the cluster - Right way in production
+    - External Name -> Redirects an in-cluser request to CNAME url 
+   
            
 
