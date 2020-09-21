@@ -23,6 +23,9 @@ a pod, then it will prompt to enter the specific container
 6) Delete pods
           
           => kubectl delete pod [pod_name]
-          
+
+7) After a pod is created using deployment, get the deployment details as below
+
+             => kubectl get deployments
           
 
