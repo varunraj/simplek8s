@@ -11,5 +11,17 @@ Create Pod (kind) file
 
           => sudo microk8s.kubectl describe pod posts
           
+4) Execute a command in a running pd
+
+          => kubectl exec -t [pod_name][cmd]
+
+5) Get logs
+
+          => kubectl logs [pod_name]
+
+6) Delete pods
+          
+          => kubectl delete pod [pod_name]
+          
           
 
