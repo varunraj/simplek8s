@@ -44,4 +44,11 @@ Add a deployment object using apply -f command.
             -> Update the tag name in image section of deployment file
             -> apply the new deployment. Now the old pods will be terminated and new one will be up and running
           
+          Updating the pod without changing the version of container in the code
+          ----------------------------------------------------------------------
+           -> Build image using latest tag (dont provide a tag when image is built)
+           - run below command
+           
+                    => kubectl rollout restart deployment posts-depl  (posts-depl is the name of deployment)
+           
 
