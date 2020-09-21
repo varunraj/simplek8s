@@ -4,7 +4,7 @@ PODS
 Create Pod (kind) file
 1) Use the command to create pod ( WE DONT CREATE PODS DIRECTLY. IT SHOULD BE DONE USING DEPLOYMENTS )
 
-          => sudo microk8s.kubectl apply -f posts.yaml
+          => sudo microk8s.kubectl apply -f posts.yaml (This file in micro-service-app/infra/k8s)
 
 2) Get the status of pods
 
@@ -39,7 +39,7 @@ Add a deployment object using apply -f command.
              
 2) Describe and delete as deployment as below
 
-            => kubectl describe deployment posts-depl
+            => kubectl describe deployment posts-depl (This file in micro-service-app/infra/k8s)
             => kubectl delete deployment posts-depl => All associated pods will be deleted
             
  3) Update an image ( when there is a code change )
@@ -67,12 +67,19 @@ Add a deployment object using apply -f command.
     - Load Balancer -> Make pod available to outside the cluster - Right way in production
     - External Name -> Redirects an in-cluser request to CNAME url 
    
- 1) Appy the node port service 
+ 1) Create a node port service (in dev) as quick start to expose the service to outside world. 
  
-          - > sudo microk8s.kubectl apply -f posts-srv.yaml
+          - > sudo microk8s.kubectl apply -f posts-srv.yaml (This file in micro-service-app/infra/k8s)
           - > sudo microk8s.kubectl describe posts-srv
-          - > => kubectl get services
+          - > kubectl get services
           
-          The NodePort IP is the external IP to which outside world can connect to cluster
+          NAME         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+          post-srv     NodePort    10.152.183.191   <none>        4000:32001/TCP   13s
+          
+          The NodePort IP is the external IP (32000) to which outside world can connect to cluster
+          
+          We can access the service using localhost:32001/posts (if minikube or micork8s is running is running on localhost)
+          
+ 
            
 
