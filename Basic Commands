@@ -11,9 +11,10 @@ Create Pod (kind) file
 
           => sudo microk8s.kubectl describe pod posts
           
-4) Execute a command in a running pd
+4) Execute a command in a running pod (container inside the pod). If multiple containers are running inside
+a pod, then it will prompt to enter the specific container
 
-          => kubectl exec -t [pod_name][cmd]
+          => kubectl exec -it [pod_name][cmd]
 
 5) Get logs
 
