@@ -23,14 +23,25 @@ a pod, then it will prompt to enter the specific container
 6) Delete pods
           
           => kubectl delete pod [pod_name]
+          
+          
+// DEPLOYMENT 
 
-7) After a pod is created using deployment, get the deployment details as below
+Add a deployment object using apply -f command.
+
+1) After a pod is created using deployment, get the deployment details as below
 
              => kubectl get deployments
              
-8) Describe and delete as deployment as below
+2) Describe and delete as deployment as below
 
             => kubectl describe deployment posts-depl
             => kubectl delete deployment posts-depl => All associated pods will be deleted
+            
+ 3) Update an image ( when there is a code change )
+ 
+            -> Create a new image using docker with a new tag
+            -> Update the tag name in image section of deployment file
+            -> apply the new deployment. Now the old pods will be terminated and new one will be up and running
           
 
