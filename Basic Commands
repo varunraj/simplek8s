@@ -1,5 +1,5 @@
 Create Pod (kind) file
-1) Use the command to create pod
+1) Use the command to create pod ( WE DONT CREATE PODS DIRECTLY. IT SHOULD BE DONE USING DEPLOYMENTS )
 
           => sudo microk8s.kubectl apply -f posts.yaml
 
